@@ -1,0 +1,52 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Transitions */
+/* https://www.w3schools.com/css/css3_transitions.asp */
+
+/* There are 4 properties to describe CSS transitions:
+
+transition-property
+transition-duration
+transition-timing-function
+transition-delay */
+
+/* transition: <property> <duration> <timing-function> <delay>; */
+
+/* note: for left,right etc transitions: set non-staic position AND set a left, even if 0 first before 
+animating or it won't work */
+
+/* transform: rotate, scale, skew, or translate an element */
+
+
+div{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+
+    position: absolute;
+    left: -20px;
+    
+    /* transition: font-size 5000ms ease-in, width 1000ms, left 2000ms, transform 1000ms; */
+    transition: left 2000ms, transform 2000ms, width 2000ms, font-size 2000ms, opacity 2000ms;
+}
+
+div:hover{
+    /* color: orange;
+    background-color: green; */
+
+    left: 50px;
+
+    opacity: 0;
+
+    font-size: 50px;
+    width: 100px;
+    transform: rotate(90deg) skew(29deg)
+
+   
+}
