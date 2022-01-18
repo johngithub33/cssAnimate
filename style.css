@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* CSS Transitions */
+/* CSS TRANSITIONS */
 /* https://www.w3schools.com/css/css3_transitions.asp */
 
 /* There are 4 properties to describe CSS transitions:
@@ -14,7 +14,8 @@
 transition-property
 transition-duration
 transition-timing-function
-transition-delay */
+transition-delay 
+*/
 
 /* transition: <property> <duration> <timing-function> <delay>; */
 
@@ -100,3 +101,10 @@ div.keyframeTrial {
   }
 
 
+  #buttonid{
+    position: relative;
+    display: block;
+    opacity: 1;
+    transition: background-color 3000ms, opacity 2000ms;
+
+  }
