@@ -17,3 +17,11 @@ buttonid.onclick = function() {
     this.style.backgroundColor = 'green';
     this.style.opacity = 0;
   };
+
+
+// note: the "transition" from CSS works here because the transition takes place whenever the
+//property you mention CHANGES! it doens't have to change in CSS class, it can just change in JS!!
+var elTrans = document.querySelector('.transJS');
+document.addEventListener('click', () => {
+    elTrans.style.backgroundColor = 'orange';
+});

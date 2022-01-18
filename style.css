@@ -13,8 +13,12 @@
 
 transition-property
 transition-duration
-transition-timing-function
+transition-timing-function: 
+    -sets how intermediate values are calculated for CSS properties being affected by a transition effect
+    -values: linear, ease-in/out, steps(number, end), cubic-bezier(...)
 transition-delay 
+
+transition shorthand
 */
 
 /* transition: <property> <duration> <timing-function> <delay>; */
@@ -22,7 +26,7 @@ transition-delay
 /* note: for left,right etc transitions: set non-staic position AND set a left, even if 0 first before 
 animating or it won't work */
 
-/* transform: rotate, scale, skew, or translate an element */
+/* TRANSFORM can also be transitioned: rotate, scale (scaleX, scaleY), skew (skewX, skewY), or translate an element */
 
 
 .testBox{
@@ -33,8 +37,7 @@ animating or it won't work */
     position: absolute;
     left: -20px;
     
-    /* transition: font-size 5000ms ease-in, width 1000ms, left 2000ms, transform 1000ms; */
-    transition: left 2000ms, transform 2000ms, width 2000ms, font-size 2000ms, opacity 2000ms;
+    transition: left 2000ms cubic-bezier(0.075, 0.82, 0.165, 1), transform 2000ms, width 2000ms, font-size 2000ms, opacity 2000ms;
 }
 
 div.testBox:hover{
@@ -47,9 +50,16 @@ div.testBox:hover{
 
     font-size: 50px;
     width: 100px;
-    transform: rotate(90deg) skew(29deg)
+    transform: rotate(90deg) skewX(29deg);
+}
 
-   
+.transJS{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+
+    /* property duration timing-function delay */
+    transition: background-color 2s cubic-bezier(1, 0, 0, 1) 250ms;
 }
 
 /* KEYFRAMES */
