@@ -1,12 +1,34 @@
+/*
+    CSS has 4 big areas::after
+
+    1. transitions (beginning and end state)
+            transition: <property> <duration> <timing-function> <delay>; 
+
+            can also transition a transform (#2 below)
+
+    2. transform
+            for an element: rotate, scale (scaleX, scaleY), skew (skewX, skewY), translate
+
+    3. keyframes (infinite inbetween states and stages)
+            use @keyframe
+
+            animation-name
+            animation-duration
+            animation-delay
+            animation-iteration-count
+            animation-direction
+            animation-timing-function
+            animation-fill-mode
+            animation
+
+*/
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* CSS TRANSITIONS */
+
+
+
+/* CSS TRANSITIONS ******************************************************************/
 /* https://www.w3schools.com/css/css3_transitions.asp */
 
 /* There are 4 properties to describe CSS transitions:
@@ -18,15 +40,37 @@ transition-timing-function:
     -values: linear, ease-in/out, steps(number, end), cubic-bezier(...)
 transition-delay 
 
-transition shorthand
-*/
+transition shorthand includes the above 4
+transition: <property> <duration> <timing-function> <delay>; */
 
-/* transition: <property> <duration> <timing-function> <delay>; */
-
-/* note: for left,right etc transitions: set non-staic position AND set a left, even if 0 first before 
+/* note: for left,right etc transitions: set non-static position AND set a left, even if 0 first before 
 animating or it won't work */
 
-/* TRANSFORM can also be transitioned: rotate, scale (scaleX, scaleY), skew (skewX, skewY), or translate an element */
+/* CSS TRANSFORM ******************************************************************/
+/* TRANSFORM: rotate, scale (scaleX, scaleY), skew (skewX, skewY), or translate an element 
+
+These can also be transitioned over time via transition */
+
+
+body {
+    transition: all 1s;
+}
+
+body.vanish{
+    /* display: none; */
+    /* background: red; */
+    opacity: 0;
+}
+
+
+.transJS{
+    width: 100px;
+    height: 100px;
+    background: gray;
+
+    /* property duration timing-function delay */
+    transition: background-color 5s ease-out;
+}
 
 
 .testBox{
@@ -34,36 +78,33 @@ animating or it won't work */
     height: 50px;
     background-color: purple;
 
+
     position: absolute;
-    left: -20px;
+    left: 0px;
+
+    color: black;
+
+    opacity: .1;
     
-    transition: left 2000ms cubic-bezier(0.075, 0.82, 0.165, 1), transform 2000ms, width 2000ms, font-size 2000ms, opacity 2000ms;
+    transition: 
+        all .2s ease-in-out;
+        /* left 2000ms cubic-bezier(0.075, 0.82, 0.165, 1), 
+        width 2000ms, 
+        font-size 2000ms, 
+        scalex 2000ms,
+        scaley 2000ms,
+        opacity 20ms; */
 }
 
-div.testBox:hover{
-    /* color: orange;
-    background-color: green; */
-
-    left: 50px;
-
-    opacity: 0;
-
-    font-size: 50px;
-    width: 100px;
-    transform: rotate(90deg) skewX(29deg);
-}
-
-.transJS{
-    width: 100px;
-    height: 100px;
+.testBox:hover{
+    color: orange;
     background-color: green;
-
-    /* property duration timing-function delay */
-    transition: background-color 2s cubic-bezier(1, 0, 0, 1) 250ms;
+    opacity: 1;
+    /* width: 60px; */
+    transform: scale(1.1)
 }
 
 /* KEYFRAMES */
-
 /* 
     animation-name
     animation-duration
@@ -118,3 +159,7 @@ div.keyframeTrial {
     transition: background-color 3000ms, opacity 2000ms;
 
   }
+
+
+
+ 

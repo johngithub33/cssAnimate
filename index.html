@@ -7,10 +7,19 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <div class='testBox'> test box </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div tabindex="0" class='testBox'> test box </div>
     <br><br><br>
 
     <!-- add .keyframeTrial with JS -->
@@ -18,9 +27,13 @@
 
     <button id='buttonid'>start animation</button>
 
-    <div class="transJS"> use JS to transition me</div>
+    <div class='transJS'> use JS to transition me</div>
+
+    <button class='vanishbutton'> vanish all </button>
+
 
     <script src="app.js"></script>
     
 </body>
+
 </html>
