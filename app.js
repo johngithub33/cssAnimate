@@ -21,7 +21,7 @@ buttonid.onclick = function() {
   };
 
 
-// note: the "transition" from CSS works here because the transition takes place whenever the
+// note: the "transition" from CSS works here because the transition takes place WHENEVER the
 //property you mention CHANGES! it doens't have to change in CSS class, it can just change in JS!!
 //the transition takes effect when the css property chagnes, regardless of how it does
 var elTrans = document.querySelector('.transJS');
