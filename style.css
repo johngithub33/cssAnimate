@@ -1,4 +1,10 @@
 /*
+    DON'T GET CONFUSED: transitions, transform, and translate are all words:
+    a. transitions = what you put in CSS element like "transition: color 2s" and when :hover or JS does something, 
+       it'll then transition the color
+    b. transform: just a way to adjust an element: rotate, scale, skew or TRANSLATE it (i.e. move it x or y, etc.).
+    c. translate: just one of the transforms above.
+
     CSS has 4 big areas:
 
     1. transitions (beginning and end state)
@@ -167,6 +173,7 @@ div.keyframeTrial {
      height: 50px;
      background: greenyellow;
 
+     /* needs to be here and not in hover to work right */
      transition: all 0.5s ease-in-out;
      
  }

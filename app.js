@@ -28,6 +28,9 @@ var elTrans = document.querySelector('.transJS');
 document.addEventListener('click', () => {
     elTrans.style.backgroundColor = 'orange';
 });
+document.addEventListener('transitionend', () => 
+    alert('animation ended')
+)
 
 
 
