@@ -58,11 +58,29 @@ animating or it won't work */
 These can also be transitioned over time via transition */
 
 *{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.atest{
+    display: block;
+    border: 3px solid orange;
+    font-size: 20px;
+    height: 100px;
+    width: 200px;
+
+    margin: auto;
+
+    text-align: center;
+    line-height: 90px;
+  
 }
 
 h1{
-    font-weight: 900;
+    font-style: bold;
+    font-size: 33px;
+    font-weight: bold;
     display: absolute;
     text-align: center;
 }
