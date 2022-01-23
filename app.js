@@ -29,7 +29,7 @@ document.addEventListener('click', () => {
     elTrans.style.backgroundColor = 'orange';
 });
 document.addEventListener('transitionend', () => 
-    alert('animation ended')
+    // alert('animation ended')
 )
 
 

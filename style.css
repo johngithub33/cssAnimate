@@ -57,6 +57,15 @@ animating or it won't work */
 
 These can also be transitioned over time via transition */
 
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    font-weight: 900;
+    display: absolute;
+    text-align: center;
+}
 
 body {
     transition: all 1s;
@@ -183,3 +192,21 @@ div.keyframeTrial {
     background-color: red;
     font-size: 20px;
  }
+
+
+ .arrow-down {
+    width: 0;
+    height: 0; 
+    
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    
+    border-top: 15px solid gray;
+    border-bottom: 15px solid gray;
+
+    /* to see why this makes triange, uncomment this section below */
+    /* width: 40px;
+    height: 40px;
+    border: 17px solid gray;
+    border-top: 17px solid red; */
+  }
